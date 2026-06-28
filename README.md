@@ -108,18 +108,9 @@ jupyter notebook notebooks/claim_amount_analysis.ipynb   # open the analysis
 ```
 
 ## Data
-
-This repo does **not** bundle the raw CSV (Kaggle dataset licenses vary, and
-redistribution terms weren't clear enough to assume). See
+ See
 [`data/README.md`](data/README.md) for a direct download link and setup
 steps — it takes about a minute with a free Kaggle account.
-
-## Possible extensions
-
-- Gradient boosting (XGBoost / LightGBM) for a stronger model
-- Separate models per insurance type, given how much that feature dominates
-- Investigate whether additional features (e.g. incident description text,
-  if available) narrow the large-claim residual spread
 
 ## Tools
 
