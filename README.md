@@ -6,6 +6,10 @@ column actually deserves to be modeled before building on top of it.
 
 [![CI](https://github.com/troisnetili/insurance-claims-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/troisnetili/insurance-claims-analysis/actions)
 
+<p align="center">
+  <img src="reports/figures/claim_amount_by_type_boxplot.png" width="650" alt="Claim amount by insurance type">
+</p>
+
 ## Why this project
 
 The source dataset is named "Insurance Claims **Fraud** Data" and includes a
@@ -33,10 +37,6 @@ an insurer.
 
 Both models explain roughly **70% of the variance** in claim amount using
 only policy and incident details available at claim time.
-
-<p align="center">
-  <img src="reports/figures/claim_amount_by_type_boxplot.png" width="650" alt="Claim amount by insurance type">
-</p>
 
 ### What drives claim amount
 
@@ -71,22 +71,6 @@ separating customers well by actual claims cost, while insurance type does
 so by an order of magnitude.
 
 ## Project structure
-
-```
-.
-├── data/                      # data/README.md has download instructions
-├── notebooks/
-│   └── claim_amount_analysis.ipynb   # full analysis, pre-run with outputs
-├── src/                       # importable, tested pipeline code
-│   ├── data_processing.py     #   load, clean, derived columns
-│   ├── features.py            #   feature engineering + model table (with a leakage guard)
-│   └── modeling.py            #   train / evaluate / interpret models
-├── scripts/
-│   └── build_notebook.py      #   rebuild the notebook from src/
-├── reports/figures/           # exported chart images used in this README
-├── tests/                     # pytest unit tests for src/
-└── requirements.txt
-```
 
 The notebook is intentionally thin: it imports from `src/` and focuses on
 analysis, plots, and commentary. The actual logic — cleaning, feature
